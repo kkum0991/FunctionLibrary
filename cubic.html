@@ -25,6 +25,7 @@
 		    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
 			     	<li class="nav-item"><a class="nav-link" href="#background">Background</a></li>	
 			    	<li class="nav-item"><a class="nav-link" href="#howtograph">How To Graph</a></li>
+				<li class="nav-item"><a class="nav-link" href="#solve">How To Solve</a></li>
 			    	<li class="nav-item"><a class="nav-link" href="#transformations">Transformations</a></li>
 			    	<li class="nav-item"><a class="nav-link" href="#sampleequations">Experiment</a></li>
 			    	<li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
@@ -49,7 +50,7 @@
 		 			<div class="card-block">
 						<p>Cubic forms were known by many ancient groups of people, including the Babylonians, Greeks, Chinese, Indians, and Egyptians. Babylonian cuneiform tablets from around 2000 BC to 1500 BC with calculations for cubes and cube roots. The problem of doubling the cube involves a very old cubic function, and today, it is known to be impossible. Doubling the cube involves using an unmarked straightedge and a compass in order to construct a cube that has double the volume of another cube. This cannot be done without other tools. In The Nine Chapters on the Mathematical Art, methods for solving cubic equations were compiled. This is a Chinese math book that was written some time between 10th and 2nd century BC. During the 3rd century, the Greek mathematician Diophantus found integer or rational solutions for some bivariate cubic equations. His work later led to the creation of what are now called Diophantine equations. Much later in history, during the 11th century a Persian poet-mathematician named Omar Khayyám further advanced the world’s knowledge of cubic equations. He discovered that cubic functions are able to have multiple solutions and that these are not able to be found with just a compass and straightedge. Later on, he wrote a complete classification of cubic equations and some solutions there were found through the use of intersecting conic sections. Over the course of the next 500 years, more and more was found out about these functions and how to effectively solve them.
     Today, cubic functions are used most commonly as Bézier curves. The curves present in in many drawing and graphics programs are made out of these Bézier curves. Almost all of the curves that are seen in video games are these kind of curves, too, and so are many fonts like Georgia and Times New Roman. Also, Kepler’s third law of planetary motions has tons of squares and cubes involved.
-							The parent function is y=x<sup>3</sup></p>
+							The parent function is y = x<sup>3</sup></p>
 						<div class="row">
 							<div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
 								<img class="img-fluid responsive" src="" alt="...">
@@ -74,6 +75,53 @@ The equation can also be multiplied out and written as y=ax3+bx2+cx+d but this i
 				</div>
 			</div>
 		</section><br>
+		
+		<section id="solve" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class=card-header>
+		   				<h3 class="card-title">How to Solve</h3>
+		  			</div>
+		 			<div class="card-block">
+						<p>
+							x = 3<sup>3</sup> - 2
+							First, simplify the 3 cubed by multiplying 3 by itself twice.
+							x = 27 - 2
+							Subtract 2 from 27 to find the value of “x”
+							x = 25
+						</p><br>
+						<p>
+							x<sup>3</sup> - x<sup>2</sup> = 6x<br>
+							First of all, subtract 6x from both sides in order to make a 0 on the right and put all “x” values on the left.<br>
+							x<sup>3</sup> - x<sup>2</sup> - 6x = 0<br>
+							Factor out “x” in order to turn the function into a quadratic function multiplied by “x” (quadratic functions are much easier to factor, and the “x” on the outside signifies that the function has 0 as one of the solutions.<br>
+							x(x<sup>2</sup> - x - 6) = 0<br>
+							Factor the quadratic function in the parentheses. To do this, think of two numbers that multiply to be -6, but add together to become -1.<br>
+							x(x - 3)(x + 2) = 0<br>
+							The final portion is figuring out what the solutions to the equation are. There are multiple solutions, each one making the left side of the equation 0 to match the right.<br>
+							x = 3, 0, -2<br>
+						</p><br>
+						<p>
+							x<sup>3</sup> - 300 = 43<br>
+							Add 300 to both sides of the equation is isolate the “x”.<br>
+							x<sup>3</sup> = 343<br>
+							Next, cube root both sides of the equation in order to get rid of the cubing of “x” and figure out what its exact value is.<br>
+							x = 7<br>
+							In the beginning, you could’ve also subtracted 43 from both sides in order to get 0 on the right.<br>
+							x<sup>3</sup> - 343 = 0<br>
+							Next, if you know your cube roots well enough, you would realize that -7 cubed is equal to -343, so you can simplify like this:<br>
+							x<sup>3</sup> - 7<sup>3</sup> = 0<br>
+							When there is a cubic function in his form, there’s an equation that’s used to solve it. The “x” is called “a” and the constant is called “b”: 0=(a-b)(a2+2ab+b2). Plug the -7 and x in.<br>
+							0 = (x - 7)(x<sup>2</sup> - 14x + 49)<br>
+							The quadratic in the parentheses can be factored.<br>
+							0 = (x - 7)(x - 7)(x - 7)<br>
+							This is basically saying that the only number that can make 0=0 is 7, so the solution to the equation is still 7, as before.<br>
+							x = 7
+						</p>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
 
 		<section id="transformations" class="col-md-8 offset-md-2">
 			<div class="container-fluid">
@@ -83,9 +131,9 @@ The equation can also be multiplied out and written as y=ax3+bx2+cx+d but this i
 		  			</div>
 		 			<div class="card-block">
 					<p>
-						y=<sup>1</sup>&frasl;<sub>5</sub>(-6x + 6)<sup>3</sup> + 5<br>
+						y = <sup>1</sup>&frasl;<sub>5</sub>(-6x + 6)<sup>3</sup> + 5<br>
 						First, we have to factor out -6 from -6x+6 in order to find the “b” value and find the actual horizontal translation.<br>
-						y=<sup>1</sup>&frasl;<sub>5</sub>(-6(x - 1))<sup>3</sup> + 5<br>
+						y = <sup>1</sup>&frasl;<sub>5</sub>(-6(x - 1))<sup>3</sup> + 5<br>
 						The <sup>1</sup>&frasl;<sub>5</sub> at the beginning signifies that that there is a vertical compression by a factor of <sup>1</sup>&frasl;<sub>5</sub>. All of the y-values on the function’s points are divided by 5.<br>
 						The -6 “b” value signifies that there is a horizontal compression by a factor of <sup>1</sup>&frasl;<sub>6</sub> (horizontal stretches and compressions are reciprocals). All of the “x” value on the function’s points are divided by 6. The negative “b” value also indicates that this function is reflected over the y-axis.<br>
 						Next, the “h” value in the function looks like -1, but in actuality, it’s 1 because there is a subtraction symbol in the general form. This indicates that after the previous translations, the function will be moved to the right by 1 unit.<br>
