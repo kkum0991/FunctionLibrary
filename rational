@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Rational Functions</title>
+		<script type="text/javascript" src="js/expquiz"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<style type="text/css">
+			body{
+					background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+			}
+		</style>
+	</head>
+	
+	<section>
+		<nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #e3f2fd;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" style="white-space: nowrap" href="index">Function Library</a>
+		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		    	
+				<div class="navbar-nav navbar-right">
+			    	<a class="navbar-brand hidden-md-up" style="white-space: nowrap">Rational</a>
+			    </div>
+		    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
+			     	<li class="nav-item"><a class="nav-link" href="linear#background">Background</a></li>	
+			    	<li class="nav-item"><a class="nav-link" href="linear#howtograph">How To Graph</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#solve">How to Solve</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#transformations">Transformations</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#sampleequations">Experiment</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#quiz">Quiz</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#video">Video</a></li>
+			    </ul>
+			    <div class="navbar-nav navbar-right">
+			    	<a class="navbar-brand hidden-sm-down" style="white-space: nowrap">Rational</a>
+			    </div>
+		  </div>
+		</nav>
+	</section>
+	
+	<body>
+		<section id="background" class="col-md-8 offset-md-2">
+			<br>
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Background</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>Rational functions are those who can be defined by a rational fraction. A rational fraction is represented by one polynomial divided by another. A rational function has the following base form. y = <sup>1</sup>&frasl;<sub>x</sub> . In transformation form it has the form y = <sup>a</sup>&frasl;<sub>b(x-c)</sub> + d.</p>
+							<div class="row">
+					 			<div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
+					 				<img class="img-fluid responsive" src="resources/rational.gif" alt="...">
+					 			</div>
+				 			</div>
+				 		<br><p>The main use of rational functions is to solve problems involving time and rates, they allow us to figure out how long it will take an individual to complete a task. A logistic function also has a similar form to rational function, and they have many uses. Logistic functions can model population growth, be used in artificial intelligence, and in physics to make statistics on a system in thermal equilibrium.</p>
+				 		</div>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="howtograph" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class=card-header>
+		   				<h3 class="card-title">How to Graph</h3>
+		  			</div>
+		 			<div class="card-block">
+		 			<p>Every rational function has at least one vertical asymptote, as well as a horizontal asymptote. <br><br>The vertical asymptote(s) are determined by the denominator of the rational function. At any point when the denominator is 0, a vertical asymptote is created. For example, if the equation is <sup>1</sup>&frasl;<sub>(x-2)</sub> , then it would have a vertical asymptote at <var>x</var> = 2 because the denominator cannot be equal to 0 at any time. <br><br>To find the horizontal asymptote, you must determine whether the largest power in the numerator and the largest power in the denominator.
+		 			<ul>
+		 			<li>If the power of the numerator is larger, then <var>x</var> = 0 is the horizontal asymptote.</li><li>If the numerator and denominator have the same largest exponent, then take the coefficient of the variable with the largest exponent from the numerator and divide it with  the coefficient of the variable with the largest exponent from the denominator.</li><li>If the power of the denominator is larger, then there is no horizontal asymptote.</li></ul>
+					The simplest rational function, <sup>1</sup>&frasl;<sub>x</sub> , has points at (-1, -1), (-.5, -2), (.5, 2), and (1, 1). Utilising these key points is essential when shifting or transforming a rational function.
+					<br><br>In the form y = <sup>a</sup>&frasl;<sub>b(x-c)</sub> + d...
+					<ul>
+						<li><var>a</var> represents the vertical stretch (multiply <var>y</var> by a)</li>
+						<li><var>b</var> represents the horizontal stretch (divide <var>x</var> by b)</li>
+						<li><var>c</var> represents the horizontal shift</li>
+						<li><var>d</var> represents the vertical shift</p></li>
+					</ul>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="solve" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">How to Solve</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>To solve a rational function, you must first make sure that the denominator doesn't equal 0, or else you won't be able to solve it. When solving for <var>x</var>, first add the <var>d</var> to <var>y</var>. Then remove the denominator by multiplying both sides of the equation by the denominator. After that it&#39;s a matter of simple math and intuition.</p>
+		 				<p>Example 1:<br>
+						2 = <sup>3</sup>&frasl;<sub>2(x - 5)</sub> - 6<br>
+						Add 6 to 2<br>
+						8 = <sup>3</sup>&frasl;<sub>2(x - 5)</sub><br>
+						Multiply 8 by 2(x - 5)<br>
+						16(x - 5) = 3<br>
+						Divide by 16<br>
+						<sup>3</sup>&frasl;<sub>16</sub> = x - 5<br>
+						Add 5<br>
+						<mark>x = <sup>83</sup>&frasl;<sub>16</sub></mark></p><br>
+						
+						<p>Example 2:<br>
+						1 = <sup>3</sup>&frasl;<sub>6(x - 2)</sub> + 5<br>
+						Add 5 to 1 <br>
+						6 = <sup>3</sup>&frasl;<sub>6(x - 2)</sub><br>
+						Multiply 6 by 6(x - 2)<br>
+						36(x - 2) = 3<br>
+						Divide by 36<br>
+						<sup>3</sup>&frasl;<sub>36</sub> = x - 2<br>
+						Add 2<br>
+						<mark>x = <sup>25</sup>&frasl;<sub>12</sub></mark></p><br>
+
+						<p>Example 3:<br>
+						3 = <sup>(x - 1)</sup>&frasl;<sub>(x - 3)</sub><br>
+						Multiply 3 by (x - 3)<br>
+						3(x - 3) = (x - 1)<br>
+						Distribute<br>
+						3x - 9 = x - 1
+						Add 9 to -1 and subtract x from 3x.<br>
+						2x = 8<br>
+						Divide by 2<br>
+						<mark>x = 4</mark></p>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="transformations" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Transformations</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>Take into consideration the following rational function:<br>
+		 				&emsp;y = <sup>2</sup>&frasl;<sub>3(x+4)</sub> - 4<br><br>
+		 				We see that this function has gone through a:
+		 				<ul>
+							<li>Vertical stretch by 2 (multiply all <var>y</var> values by 2)</li>
+							<li>Horizontal compression by 3 (multiply all <var>x</var> values by 3)</li>
+							<li>Horizontal shift left 4</li>
+							<li>Vertical shift down 4</li>
+						</ul>
+						When graphing, shifts must be done after stretches and compressions.<br>
+						In this function, the new horizontal asymptote is <var>y</var> = -4
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="sampleequations" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Experiment</h3>
+		  			</div>
+		 			<div class="card-block">
+		 			<script src="https://www.desmos.com/api/v0.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+						<div id="calculator" style="width: 55vw; height: 70vh; margin-left:auto;margin-right:auto;"></div>
+						<script>
+							var elt = document.getElementById('calculator');
+							var calculator = Desmos.GraphingCalculator(elt);
+							calculator.setExpression({id:'graph1', latex:'y=\\frac{a}{b\\left(x-c\\right)}+d'});
+							calculator.setExpression({id: 'a', latex: 'a=1', sliderBounds: { min: -10, max: 10, step: .1}})
+							calculator.setExpression({id: 'b', latex: 'b=2', sliderBounds: { min: -10, max: 10, step: .1}});
+							calculator.setExpression({id: 'c', latex: 'c=0', sliderBounds: { min: -10, max: 10, step: .1}});
+							calculator.setExpression({id: 'd', latex: 'd=0', sliderBounds: { min: -10, max: 10, step: .1}});
+						</script>
+						<p></p>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="quiz" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Quiz</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>For Questions 1-8 use the exponential function f(x) = 4(2)<sup>(x-3)</sup>+2
+			 			<p class="question" id = "q1">1. Find the y-intercept.</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="a" id="q1a"><label for="q1a" class="c">&emsp;(0, 2.5)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="b" id="q1b"><label for="q1b">&emsp;(0, 2)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="c" id="q1c"><label for="q1c">&emsp;(0, 3)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="d" id="q1d"><label for="q1d">&emsp;(0, -2)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="e" id="q1e"><label for="q1e">&emsp;(0, -2.5)</label><br/>
+			 			</ul>
+
+			 			<p class="question" id = "q2">2. Find the x-intercept.</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="a" id="q2a"><label for="q2a">&emsp;(4, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="b" id="q2b"><label for="q2b">&emsp;(2, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="c" id="q2c"><label for="q2c">&emsp;(0, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="d" id="q2d"><label for="q2d">&emsp;(-3, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="e" id="q2e"><label for="q2e" class="c">&emsp;None</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q3">3. Is it increasing or decreasing?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="a" id="q3a"><label for="q3a" class="c">&emsp;Increasing</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="b" id="q3b"><label for="q3b">&emsp;Decreasing</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="c" id="q3c"><label for="q3c">&emsp;Neither</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="d" id="q3d"><label for="q3d">&emsp;Both</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q4">4. Is it positive or negative?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="a" id="q4a"><label for="q4a" class="c">&emsp;Positive</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="b" id="q4b"><label for="q4b">&emsp;Negative</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="c" id="q4c"><label for="q4c">&emsp;Neither</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="d" id="q4d"><label for="q4d">&emsp;Both</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q5">5. What is the domain?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="a" id="q5a"><label for="q5a">&emsp;(-3, 2)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="b" id="q5b"><label for="q5b">&emsp;(2, 4)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="c" id="q5c"><label for="q5c">&emsp;(4, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="d" id="q5d"><label for="q5d" class="c">&emsp;(-&#8734;, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="e" id="q5e"><label for="q5e">&emsp;(0, &#8734;)</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q6">6. What is the range?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="a" id="q6a"><label for="q6a">&emsp;(-&#8734;, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="b" id="q6b"><label for="q6b">&emsp;(2, 4)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="c" id="q6c"><label for="q6c" class="c">&emsp;(2, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="d" id="q6d"><label for="q6d">&emsp;(-&#8734;, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="e" id="q6e"><label for="q6e">&emsp;(0, &#8734;)</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q7">7. What is the asymptote?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="a" id="q7a"><label for="q7a">&emsp;y = 4</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="b" id="q7b"><label for="q7b">&emsp;y = 0</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="c" id="q7c"><label for="q7c">&emsp;y = 8</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="d" id="q7d"><label for="q7d">&emsp;y = 16</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="e" id="q7e"><label for="q7e" class="c">&emsp;y = 2</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q8">8. Solve for x if y = 4.</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="a" id="q8a"><label for="q8a">&emsp;x = 9</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="b" id="q8b"><label for="q8b">&emsp;x = 2</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="c" id="q8c"><label for="q8c" class="c">&emsp;x = 10</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="d" id="q8d"><label for="q8d">&emsp;x = -10</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="e" id="q8e"><label for="q8e">&emsp;x = 0</label><br/>
+			 			</ul>
+
+			 			<p class="question" id = "q9">9. A biologist is researching a species of bacteria. At time t = 0 hours, he puts 150 bacteria into a growth medium. Eight hours later, he measures 450 bacteria. Assuming exponential growth, what is the growth constant "k" for the bacteria? (Round k to two decimal places if necessary.)</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="a" id="q9a"><label for="q9a" class="c">&emsp;1.15</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="b" id="q9b"><label for="q9b">&emsp;150</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="c" id="q9c"><label for="q9c">&emsp;3</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="d" id="q9d"><label for="q9d">&emsp;11.15</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="e" id="q9e"><label for="q9e">&emsp;1.015</label><br/>
+			 			</ul>
+
+			 			<p class="question" id = "qx">10. Bob 1,500 dollars into his bank account. His bank compounds 1.01% quarterly. How much money will he have in 3 years?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="a" id="qxa"><label for="qxa">&emsp;$1515.00</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="b" id="qxb"><label for="qxb">&emsp;$4500.00</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="c" id="qxc"><label for="qxc">&emsp;$1545.45</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="d" id="qxd"><label for="qxd" class="c">&emsp;$1692.25</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="e" id="qxe"><label for="qxe">&emsp;$4545.00</label><br/>
+			 			</ul>
+			 			<button type="button" onclick="myFunction(); return false;" data-toggle="modal" data-target="#q" value="Submit" class="btn btn-primary">Submit</button>
+			 			<button type="button" onclick="reveal(); return false;" value="reveal" class="btn btn-secondary">Reveal Answers</button>
+						<div class="modal fade" id="q" tabindex="-1" role="dialog" aria-labelledby="quiz">
+						    <div class="modal-dialog modal-sm" role="document">
+						        <div class="modal-content">
+						        	<div class="modal-body">
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        		<h4 class="modal-title" id="score"></h4>
+							  		</div>
+						    	</div>
+						    </div>
+						</div>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="video" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Video</h3>
+		  			</div>
+		 			<div class="card-block">
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	</body>
+
+	<footer class="foot">
+		<div class="text-center text-muted">
+			<p><br>Kishore Kumar, Akhil Kodumuri, Klaidas Buinickas, Patrick Dietrich</p>
+		</div>
+	</footer>
+</html>

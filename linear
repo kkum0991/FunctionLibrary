@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Linear Functions</title>
+		<script type="text/javascript" src="js/linearquiz"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<style type="text/css">
+			body{
+					background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+			}
+		</style>
+	</head>
+	
+	<section>
+		<nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #e3f2fd;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" style="white-space: nowrap" href="index">Function Library</a>
+		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		    	
+				<div class="navbar-nav navbar-right">
+			    	<a class="navbar-brand hidden-md-up" style="white-space: nowrap">Linear</a>
+			    </div>
+		    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
+			     	<li class="nav-item"><a class="nav-link" href="linear#background">Background</a></li>	
+			    	<li class="nav-item"><a class="nav-link" href="linear#howtograph">How To Graph</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#solve">How to Solve</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#transformations">Transformations</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#sampleequations">Experiment</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#quiz">Quiz</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="linear#video">Video</a></li>
+			    </ul>
+			    <div class="navbar-nav navbar-right">
+			    	<a class="navbar-brand hidden-sm-down" style="white-space: nowrap">Linear</a>
+			    </div>
+		  </div>
+		</nav>
+	</section>
+	
+	<body>
+		<section id="background" class="col-md-8 offset-md-2">
+			<br>
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Background</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>Linear functions are those whose graph is a straight line. A linear function has the following form. <var>y = f(x) = ax + b</var>. The slope (rise over run) of the line is represented by <var>a</var>, while <var>x</var> is the variable, and <var>b</var> is the constant. A linear function has one independent variable and one dependent variable. The independent variable is <var>x</var> and the dependent variable is <var>y</var>.</p>
+						<div class="row">
+				 			<div class="col-lg-5 col-md-6 col-sm-8 col-xs-12">
+				 				<img class="img-fluid responsive" src="resources/linearp1.jpg" alt="...">
+				 			</div>
+			 			</div>
+			 			<p>Linear functions date back to times of the ancient Babylonians. Little is known about their origin. The first person to refer to it as a function was Gottfried Wilhelm Leibniz.</p>
+			 			<p>Linear functions are useful when determining revenue when fixed costs are involved. They can also be used when calculating distance and/or time. In fact, linear functions have use almost anywhere where constant growth/decay is involved, because of the fact that a linear function increases at the same rate evrerywhere.</p>
+				 	</div>
+		  		</div>
+			</div>
+		</section><br>
+
+		<section id="howtograph" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class=card-header>
+		   				<h3 class="card-title">How to Graph</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>The slope, <var>a</var>, is the rise over run. If the <var>a</var> value is 3 for example, for every 1 step to the right, the <var>y</var> value goes up 3. If <var>a</var> was &#189;, for every 2 you go right, the <var>y</var> value goes up 1. Similarly, if <var>a</var> is negative, like -5, for every 1 we go right, the <var>y</var> value goes down 5.</p>
+                        <p>One important thing to note when determining intercepts are parentheses. Both <var>y = 5(x + 5)</var> and <var>y =  5x + 5</var> look similar, but the parentheses make <var>y = 5(x + 5)</var> actually <var>y =  5x + 25</var>. The <var>b</var> value is the y-intercept, as well as the x-intercept divided by the negative <var>a</var> value. This is because of the nature of the linear function. In its base form (<var>y = ax + b</var>), for every 1 right you go one up. This means if the y-intercept is (0, -3) (meaning <var>b</var> is -3 and the equation is <var>y = x - 3</var>) then the next value would be (1, -2) then (2, -1) and then (3, 0), the x-intercept, which is also <var>b</var> divided by the negative <var>a</var> value. <a href="https://www.desmos.com/calculator/oce3ybvxxv" target="_blank">Click here for an example</a></p>
+                        <p>Tips for graphing:</p>
+                        <ul>
+                        	<li>Use the points (-1, -1), (0, 0), and (1, 1) as anchor points when transforming and/or shifting a linear function</li>
+                        	<li>Do transformations first (<var>a</var>), then shifts (<var>b</var>)</li>
+                        </ul>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="solve" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">How to Solve</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>To solve a linear equation, simply put, you must isolate x so that it has no constants or coefficients on it's side of the equation<br>here are some examples:<br></p>
+		 				<p>x is multiplied by a coefficient of two, y is 5, what is x?<br>	
+		 				2x = 5<br>
+						Divide both sides by two to make the coefficient of x one. Because x is isolated we are finished.<br>
+						<mark>x = 2.5</mark><br><br>
+
+						We look at this problem, and see x with a coefficient of 3, a constant of 27, and y as 81<br>
+						3x + 27 = 81<br>
+						Subtract 27 from 81<br>
+						3x = 54<br>
+						Divide both sides by 3 because that will make x completely isolated from constants and coefficients on its side<br>
+						<mark>x = 18</mark><br><br>
+
+						Let&#39;s look at a more complex example.<br>
+						129 = 2(3(x + 6)) + 19<br>
+						First, subtract 19<br>
+						120 = 2(3(x + 6))<br>
+						Next, divide by 2<br>
+						60 = 3(x+6)<br>
+						We can divide by 3 now<br>
+						20 = x + 6<br>
+						Subtract 6<br>
+						<mark>x = 14</mark>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="transformations" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Transformations</h3>
+		  			</div>
+		 			<div class="card-block">
+		 				<p>Take into consideration the following linear function:<br><var>&emsp;y = 4(3(x - 3)) + 4</var><br><br>We see that this function has gone through a:</p>
+		 				<ul>
+		 					<li>Vertical strech by 4 (Multiply all <var>y</var> values by 4)</li>
+		 					<li>Horizontal compression by 3 (Divide all <var>x</var> values by 3)</li>
+		 					<li>Horizontal shift right 3</li>
+		 					<li>Vertical shift up 4</li>
+		 				</ul>
+		 				<p>Vertical and horizontal transformations are indistinguishable on linear functions due to their constant nature. If you divide <var>x</var> (horizontal compress by 4) by 4 or multiply <var>y</var> by 4 (vertical strectch by 4), you would get the same result in a linear function. In this function, this means both the horizontal compression and vertical stretch effectively multiply to 12.
+						Horizontal shifts are multiplied by vertical and horizontal transformations because they are in parentheses with the <var>x</var> value when factored. Vertical tranformations apply to all variables, constants, and coefficients in the equation.</p>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="sampleequations" class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Experiment</h3>
+		  			</div>
+		 			<div class="card-block">
+		 			<script src="https://www.desmos.com/api/v0.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+						<div id="calculator" style="width: 55vw; height: 70vh; margin-left:auto;margin-right:auto;"></div>
+						<script>
+							var elt = document.getElementById('calculator');
+							var calculator = Desmos.GraphingCalculator(elt);
+							calculator.setExpression({id:'graph1', latex:'y=ax+b'});
+							calculator.setExpression({id: 'a', latex: 'a=1', sliderBounds: { min: -10, max: 10, step: .1}})
+							calculator.setExpression({id: 'b', latex: 'b=0', sliderBounds: { min: -10, max: 10, step: .1}});
+						</script>
+						<p></p>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+
+		<section id="quiz"  class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Quiz</h3>
+		  			</div>
+		 			<div class="card-block">
+			 			<p class="question" id = "q1">1. What is the sum of the y-intercept and the slope of 4x - 8y = 6?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="a" id="q1a"><label for="q1a" class="c">&emsp;-1/4</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="b" id="q1b"><label for="q1b">&emsp;2</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="c" id="q1c"><label for="q1c">&emsp;-2</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="d" id="q1d"><label for="q1d">&emsp;6</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q1" value="e" id="q1e"><label for="q1e">&emsp;-1/2</label><br/>
+			 			</ul>
+
+			 			<p class="question" id = "q2">2. If you shifted y = 3x + 6 five units to the right, what would the new equation be?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="2a" id="q2a"><label for="q2a">&emsp;y = 3x + 11</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="2b" id="q2b"><label for="q2b">&emsp;y = 8x + 6</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="2c" id="q2c"><label for="q2c">&emsp;y = 3x + 1</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="2d" id="q2d"><label for="q2d" class="c">&emsp;y = 3x - 9</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q2" value="2e" id="q2e"><label for="q2e">&emsp;y = 8x + 11</label><br/>
+			 			</ul>
+
+			 			<p class="question" id = "q3">3. What is the equation of this line?</p>
+			 			<div class="row">
+				 			<div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+				 				<img class="img-thumbnail responsive" src="resources/lineargraph1.png" alt="...">
+				 			</div>
+				 		</div>
+			 			<ul class="answers">
+			 				<br><input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="3a" id="q3a"><label for="q3a">&emsp;y = x/3 + 4</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="3b" id="q3b"><label for="q3b">&emsp;y = 3x + 3</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="3c" id="q3c"><label for="q3c" class="c">&emsp;y = x/3 + 3</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="3d" id="q3d"><label for="q3d">&emsp;y = -3x + 3</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q3" value="3e" id="q3e"><label for="q3e">&emsp;y = -x/3 + 4</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q4">4. Consider the function y = 2x - 4. Vertically stretch it by a factor of 2. Horizontally compress it by a factor of 3. Shift it two units to the right, and one down, what would the new equation be?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="4a" id="q4a"><label for="q4a">&emsp;y = 4/3x - 11</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="4b" id="q4b"><label for="q4b">&emsp;y = y = 4/3x - 7</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="4c" id="q4c"><label for="q4c">&emsp;y = 12x + 15</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="4d" id="q4d"><label for="q4d">&emsp;y = 12x - 15</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q4" value="4e" id="q4e"><label for="q4e" class="c">&emsp;y = 12x - 33</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q5">5. Evaluate x for the equation y = 4(x - 8) - 17 if y = 43 (Round to two decimal places if necessary).</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="5a" id="q5a"><label for="q5a">&emsp;x = 48</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="5b" id="q5b"><label for="q5b" class="c">&emsp;x = 12</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="5c" id="q5c"><label for="q5c">&emsp;y = 28</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="5d" id="q5d"><label for="q5d">&emsp;x = 8.75</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q5" value="5e" id="q5e"><label for="q5e">&emsp;x = 0</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q6">6. Evaluate x for the equation y = 4(x - 8) - 17 if y = 43 (Round to two decimal places if necessary).</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="6a" id="q6a"><label for="q6a" class="c">&emsp;x = 39.33</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="6b" id="q6b"><label for="q6b">&emsp;x = 43</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="6c" id="q6c"><label for="q6c">&emsp;y = 88.5</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="6d" id="q6d"><label for="q6d">&emsp;x = 46</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q6" value="6e" id="q6e"><label for="q6e">&emsp;x = 103.5</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q7">7. All linear functions have a domain of...</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="7a" id="q7a"><label for="q7a">&emsp;(0, 0)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="7b" id="q7b"><label for="q7b">&emsp;(-&#8734;, 0), (0, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="7c" id="q7c"><label for="q7c" class="c">&emsp;(-&#8734;, &#8734;)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="7d" id="q7d"><label for="q7d">&emsp;(<var>a</var>, <var>b</var>)</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q7" value="7e" id="q7e"><label for="q7e">&emsp;No domain</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q8">8. Bob's business makes shirts. Each shirt costs $5.50 to make. The inital cost of the factory was $2000. What is the linear function that can model Bob's costs to operate this business if <var>x</var> shirts are made? (This equation will be used from questions 8-10)</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="8a" id="q8a"><label for="q8a" class="c">&emsp;c(x) = 5.5x + 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="8b" id="q8b"><label for="q8b">&emsp;c(x) = -5.5x - 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="8c" id="q8c"><label for="q8c">&emsp;c(x) = 5.5x - 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="8d" id="q8d"><label for="q8d">&emsp;c(x) = 2000x - 5.5</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q8" value="8e" id="q8e"><label for="q8e">&emsp;c(x) = 2000x + 5.5</label><br/>
+			 			</ul>
+			 			<p class="question" id = "q9">9. Bob sells these shirts for $10 each. What linear function can model Bob's total profits if he sells <var>x</var> shirts.</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="9a" id="q9a"><label for="q9a">&emsp;p(x) = -5.5x + 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="9b" id="q9b"><label for="q9b">&emsp;p(x) = -4.5x - 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="9c" id="q9c"><label for="q9c">&emsp;p(x) = 15.5x - 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="9d" id="q9d"><label for="q9d" class="c">&emsp;p(x) = 4.5x - 2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="q9" value="9e" id="q9e"><label for="q9e">&emsp;p(x) = 2010x + 5.5</label><br/>
+			 			</ul>
+			 			<p class="question" id = "qx">9. Bob has sold 1350 shirts. What are his profits?</p>
+			 			<ul class="answers">
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="xa" id="qxa"><label for="qxa">&emsp;$0</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="xb" id="qxb"><label for="qxb">&emsp;-$4075</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="xc" id="qxc"><label for="qxc">&emsp;$18925</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="xd" id="qxd"><label for="qxd">&emsp;-$2000</label><br/>
+			 				<input style="vertical-align: middle; margin: 0px;" type="radio" name="qx" value="xe" id="qxe"><label for="qxe" class="c">&emsp;$4075</label><br/>
+			 			</ul>
+
+			 		
+			 			<button type="button" onclick="myFunction(); return false;" data-toggle="modal" data-target="#q" value="Submit" class="btn btn-primary">Submit</button>
+			 			<button type="button" onclick="reveal(); return false;" value="reveal" class="btn btn-secondary">Reveal Answers</button>
+						<div class="modal fade" id="q" tabindex="-1" role="dialog" aria-labelledby="quiz">
+						    <div class="modal-dialog modal-sm" role="document">
+						        <div class="modal-content">
+						        	<div class="modal-body">
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        		<h4 class="modal-title" id="score"></h4>
+							  		</div>
+						    	</div>
+						    </div>
+						</div>
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<section id="video"  class="col-md-8 offset-md-2">
+			<div class="container-fluid">
+				<div class="card">
+		  			<div class="card-header">
+		   				<h3 class="card-title">Video</h3>
+		  			</div>
+		 			<div class="card-block">
+		  			</div>
+				</div>
+			</div>
+		</section><br>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	</body>
+
+	<footer class="foot">
+		<div class="text-center text-muted">
+			<p><br>Kishore Kumar, Akhil Kodumuri, Klaidas Buinickas, Patrick Dietrich</p>
+		</div>
+	</footer>
+</html>

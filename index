@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<header>
+		<title>Function Library</title>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<style type="text/css">
+				a{
+					height: 13.5vh;  border-radius: 0 !important; line-height: 15vh;
+				}
+				h1.big{
+					font-size: 50px;
+				}
+				#grad1{
+					background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+				}
+				span{
+					font-size: 30px;
+				}
+		</style>
+	</header>
+
+	<body id="grad1">
+		<section id="main">
+			<div class="text-center container-fluid">
+				<br><h1 class="big">Function Library</h1><br><br>
+				<div role="group" aria-label="x">
+					<div class="row">
+						<a href="linear" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Linear</span></a>
+						<a href="abs" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Absolute Value</span></a>
+					</div>
+					<div class="row">
+						<a href="quadratic" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Quadratic</span></a>
+						<a href="squareroot" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Square Root</span></a>
+						
+					</div>
+					<div class="row">
+						<a href="cubic" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Cubic</span></a>
+						<a href="cuberoot" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Cube Root</span></a>
+					</div>
+					<div class="row">
+						<a href="logarithmic" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Logarithmic</span></a>
+						<a href="exponential" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Exponential</span></a>
+					</div>
+					<div class="row">
+						<a href="rational" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Rational</span></a>
+						<a href="trigonometric" class="col-sm-6 btn btn-outline-primary btn-lg"><span>Trigonometric</span></a>	
+					</div>
+				</div>
+				<div class="text-center sticky-bottom text-muted">
+					<p style="padding-bottom: 17px;"><br><br>Kishore Kumar, Akhil, Klaidas, Patrick</p>
+				</div>
+			</div>	
+			<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		</section>
+	</body>
+</html>
