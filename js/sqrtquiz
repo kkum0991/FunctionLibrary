@@ -14,7 +14,7 @@ function myFunction() {
     	document.getElementById('q2').style.color = 'red';
     }
 
-     if (document.getElementById('q3c').checked){
+     if (document.getElementById('q3a').checked){
         count++;
         document.getElementById('q3').style.color = 'green';
     }else{
