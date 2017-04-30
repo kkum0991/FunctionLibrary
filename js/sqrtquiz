@@ -1,0 +1,77 @@
+function myFunction() {
+    var count = 0;
+    if (document.getElementById('q1c').checked){
+    	count++;
+    	document.getElementById('q1').style.color = 'green';
+    }else{
+    	document.getElementById('q1').style.color = 'red';
+    }
+
+    if (document.getElementById('q2e').checked){
+    	count++;
+    	document.getElementById('q2').style.color = 'green';
+    }else{
+    	document.getElementById('q2').style.color = 'red';
+    }
+
+     if (document.getElementById('q3c').checked){
+        count++;
+        document.getElementById('q3').style.color = 'green';
+    }else{
+        document.getElementById('q3').style.color = 'red';
+    }
+       if (document.getElementById('q4a').checked){
+        count++;
+        document.getElementById('q4').style.color = 'green';
+    }else{
+        document.getElementById('q4').style.color = 'red';
+    }
+    if (document.getElementById('q5d').checked){
+        count++;
+        document.getElementById('q5').style.color = 'green';
+    }else{
+        document.getElementById('q5').style.color = 'red';
+    }
+    
+
+     if (document.getElementById('q6c').checked){
+        count++;
+        document.getElementById('q6').style.color = 'green';
+    }else{
+        document.getElementById('q6').style.color = 'red';
+    }
+     if (document.getElementById('q7e').checked){
+        count++;
+        document.getElementById('q7').style.color = 'green';
+    }else{
+        document.getElementById('q7').style.color = 'red';
+    }
+     if (document.getElementById('q8c').checked){
+        count++;
+        document.getElementById('q8').style.color = 'green';
+    }else{
+        document.getElementById('q8').style.color = 'red';
+    }
+    document.getElementById('score').innerHTML = "Your score: " + count + " / 10";
+     if (document.getElementById('q9a').checked){
+        count++;
+        document.getElementById('q9').style.color = 'green';
+    }else{
+        document.getElementById('q9').style.color = 'red';
+    }
+    document.getElementById('score').innerHTML = "Your score: " + count + " / 10";
+      if (document.getElementById('qxd').checked){
+        count++;
+        document.getElementById('qx').style.color = 'green';
+    }else{
+        document.getElementById('qx').style.color = 'red';
+    }
+    document.getElementById('score').innerHTML = "Your score: " + count + " / 10";
+}
+
+function reveal() {       
+          var elements = document.getElementsByClassName("c")
+            for(var i=0; i<elements.length; i++) {
+                elements[i].style.color = '#00ff00';
+            }
+}
