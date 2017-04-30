@@ -37,7 +37,7 @@ function myFunction() {
      if (document.getElementById('q6c').checked){
         count++;
         document.getElementById('q6').style.color = 'green';
-    }else{
+    }else{ 
         document.getElementById('q6').style.color = 'red';
     }
      if (document.getElementById('q7e').checked){
