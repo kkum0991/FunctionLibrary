@@ -62,63 +62,63 @@ function myFunction() {
     }
     if (document.getElementById('qx1c').checked){
         count++;
-        document.getElementById('q1').style.color = 'green';
+        document.getElementById('qx1').style.color = 'green';
     }else{
-        document.getElementById('q1').style.color = 'red';
+        document.getElementById('qx1').style.color = 'red';
     }
     if (document.getElementById('qx2d').checked){
         count++;
-        document.getElementById('q2').style.color = 'green';
+        document.getElementById('qx2').style.color = 'green';
     }else{
-        document.getElementById('q2').style.color = 'red';
+        document.getElementById('qx2').style.color = 'red';
     }
     if (document.getElementById('qx3a').checked){
         count++;
-        document.getElementById('q3').style.color = 'green';
+        document.getElementById('qx3').style.color = 'green';
     }else{
-        document.getElementById('q3').style.color = 'red';
+        document.getElementById('qx3').style.color = 'red';
     }
     if (document.getElementById('qx4a').checked){
         count++;
-        document.getElementById('q4').style.color = 'green';
+        document.getElementById('qx4').style.color = 'green';
     }else{
-        document.getElementById('q4').style.color = 'red';
+        document.getElementById('qx4').style.color = 'red';
     }
     if (document.getElementById('qx5d').checked){
         count++;
-        document.getElementById('q5').style.color = 'green';
+        document.getElementById('qx5').style.color = 'green';
     }else{
-        document.getElementById('q5').style.color = 'red';
+        document.getElementById('qx5').style.color = 'red';
     }
     if (document.getElementById('qx6c').checked){
         count++;
-        document.getElementById('q6').style.color = 'green';
+        document.getElementById('qx6').style.color = 'green';
     }else{
-        document.getElementById('q6').style.color = 'red';
+        document.getElementById('qx6').style.color = 'red';
     }
     if (document.getElementById('qx7b').checked){
         count++;
-        document.getElementById('q7').style.color = 'green';
+        document.getElementById('qx7').style.color = 'green';
     }else{
-        document.getElementById('q7').style.color = 'red';
+        document.getElementById('qx7').style.color = 'red';
     }
     if (document.getElementById('qx8b').checked){
         count++;
-        document.getElementById('q8').style.color = 'green';
+        document.getElementById('qx8').style.color = 'green';
     }else{
-        document.getElementById('q8').style.color = 'red';
+        document.getElementById('qx8').style.color = 'red';
     }
     if (document.getElementById('qx9d').checked){
         count++;
-        document.getElementById('q9').style.color = 'green';
+        document.getElementById('qx9').style.color = 'green';
     }else{
-        document.getElementById('q9').style.color = 'red';
+        document.getElementById('qx9').style.color = 'red';
     }
     if (document.getElementById('qxxa').checked){
         count++;
-        document.getElementById('qx').style.color = 'green';
+        document.getElementById('qxx').style.color = 'green';
     }else{
-        document.getElementById('qx').style.color = 'red';
+        document.getElementById('qxx').style.color = 'red';
     }
     document.getElementById('score').innerHTML = "Your score: " + count + " / 20";
 }
