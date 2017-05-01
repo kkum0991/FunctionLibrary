@@ -79,7 +79,7 @@
 							<li>Negative: (0, 1)</li>
 							<li>Positive: (1, ∞)</li> 
 							<li>Increasing: (0, ∞)</li> 
-							<li>End behaviors: as x &rarr; &infin;; y &rarr; &infin;.<br>As x goes &rarr; 0; y goes &rarr; -&infin;.</li>
+							<li>End behaviors: as x &rarr; &infin;; y &rarr; &infin;.<br>As x &rarr; 0; y &rarr; -&infin;.</li>
 							<li>x-intercept: (1, 0)</li>
 							<li>y-intercept: None</li>
 						</ul>
@@ -115,11 +115,12 @@ This graph is moved left one, up three, and is vertically stretched by 2 compare
 						<script>
 							var elt = document.getElementById('calculator');
 							var calculator = Desmos.GraphingCalculator(elt);
-							calculator.setExpression({id:'graph1', latex:'y=a' + '\\log(b(x-c)) + d'});
+							calculator.setExpression({id:'graph1', latex:'y=a' + '\\log_e(b(x-c)) + d'});
 							calculator.setExpression({id: 'a', latex: 'a=1', sliderBounds: { min: -10, max: 10, step: .1}})
 							calculator.setExpression({id: 'b', latex: 'b=2', sliderBounds: { min: -10, max: 10, step: .1}});
 							calculator.setExpression({id: 'c', latex: 'c=0', sliderBounds: { min: -10, max: 10, step: .1}});
 							calculator.setExpression({id: 'd', latex: 'd=0', sliderBounds: { min: -10, max: 10, step: .1}});
+							calculator.setExpression({id: 'e', latex: 'd=0', sliderBounds: { min: 1, max: 10, step: .1}});
 						</script>
 						<p></p>
 		  			</div>
