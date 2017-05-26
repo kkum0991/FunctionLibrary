@@ -19,7 +19,8 @@
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script>
-    	var myGamePiece;
+	var p_one;
+	var p_two;
 
 	function startGame() {
 		p_one = new component(30, 30, "red", 225, 225);
@@ -27,69 +28,76 @@
 		myGameArea.start();
 	}
 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = screen.width;
-        this.canvas.height = screen.height;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
-        window.addEventListener('keydown', function (e) {
-            e.preventDefault();
-            myGameArea.keys = (myGameArea.keys || []);
-            myGameArea.keys[e.keyCode] = (e.type == "keydown");
-        })
-        window.addEventListener('keyup', function (e) {
-            myGameArea.keys[e.keyCode] = (e.type == "keydown");
-        })
-    },
-    stop : function() {
-        clearInterval(this.interval);
-    },    
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
+	var myGameArea = {
+	    canvas : document.createElement("canvas"),
+	    start : function() {
+		this.canvas.width = screen.width;
+		this.canvas.height = screen.height;
+		this.context = this.canvas.getContext("2d");
+		document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+		this.frameNo = 0;
+		this.interval = setInterval(updateGameArea, 20);
+		window.addEventListener('keydown', function (e) {
+		    e.preventDefault();
+		    myGameArea.keys = (myGameArea.keys || []);
+		    myGameArea.keys[e.keyCode] = (e.type == "keydown");
+		})
+		window.addEventListener('keyup', function (e) {
+		    myGameArea.keys[e.keyCode] = (e.type == "keydown");
+		})
+	    },
+	    stop : function() {
+		clearInterval(this.interval);
+	    },    
+	    clear : function() {
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+	    }
+	}
 
-function component(width, height, color, x, y, type) {
+	function component(width, height, color, x, y, type) {
+	    this.type = type;
+	    this.width = width;
+	    this.height = height;
+	    this.speed = 0;
+	    this.angle = 0;
+	    this.moveAngle = 0;
+	    this.x = x;
+	    this.y = y;    
+	    this.update = function() {
+		ctx = myGameArea.context;
+		ctx.save();
+		ctx.translate(this.x, this.y);
+		ctx.rotate(this.angle);
+		ctx.fillStyle = color;
+		ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
+		ctx.restore();    
+	    }
+	    this.newPos = function() {
+		this.angle += this.moveAngle * Math.PI / 180;
+		this.x += this.speed * Math.sin(this.angle);
+		this.y -= this.speed * Math.cos(this.angle);
+	    }
+	}
 
-    this.type = type;
-    this.width = width;
-    this.height = height;
-    this.speed = 0;
-    this.angle = 0;
-    this.moveAngle = 0;
-    this.x = x;
-    this.y = y;    
-    this.update = function() {
-        ctx = myGameArea.context;
-        ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.angle);
-        ctx.fillStyle = color;
-        ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
-        ctx.restore();    
-    }
-    this.newPos = function() {
-        this.angle += this.moveAngle * Math.PI / 180;
-        this.x += this.speed * Math.sin(this.angle);
-        this.y -= this.speed * Math.cos(this.angle);
-    }
-}
-
-function updateGameArea() {
-    myGameArea.clear();
-    p_one.moveAngle = 0;
-    p_one.speed = 0;
-    if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
-    if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
-    if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
-    if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1; }
-    p_one.newPos();
-    p_one.update();
-}
+	function updateGameArea() {
+		myGameArea.clear();
+		p_one.moveAngle = 0;
+		p_one.speed = 0;
+		if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
+		if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
+		if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
+		if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1; }
+		p_one.newPos();
+		p_one.update();
+		p_two.moveAngle = 0;
+		p_two.speed = 0;
+		if (myGameArea.keys && myGameArea.keys[87]) {p_two.moveAngle = -1; }
+		if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = 1; }
+		if (myGameArea.keys && myGameArea.keys[68]) {p_two.speed= 1; }
+		if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
+		p_two.newPos();
+		p_two.update();
+	}
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	</body>
