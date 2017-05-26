@@ -18,7 +18,7 @@
 
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		    <script>
+		<script>
 			var p_one;
 			var p_two;
 
@@ -91,14 +91,14 @@
 				p_one.update();
 				p_two.moveAngle = 0;
 				p_two.speed = 0;
-				if (myGameArea.keys && myGameArea.keys[87]) {p_two.moveAngle = -1; }
+				if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = -1; }
 				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = 1; }
-				if (myGameArea.keys && myGameArea.keys[68]) {p_two.speed= 1; }
+				if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 1; }
 				if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
 				p_two.newPos();
 				p_two.update();
 			}
-		    </script>
+		</script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	</body>
 
