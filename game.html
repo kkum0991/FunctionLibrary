@@ -19,12 +19,13 @@
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script>
-    var myGamePiece;
+    	var myGamePiece;
 
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 225, 225);
-    myGameArea.start();
-}
+	function startGame() {
+		p_one = new component(30, 30, "red", 225, 225);
+		p_two = new component(100,100, "green", 255, 255);
+		myGameArea.start();
+	}
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
@@ -80,14 +81,14 @@ function component(width, height, color, x, y, type) {
 
 function updateGameArea() {
     myGameArea.clear();
-    myGamePiece.moveAngle = 0;
-    myGamePiece.speed = 0;
-    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.moveAngle = -1; }
-    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.moveAngle = 1; }
-    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speed= 1; }
-    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speed= -1; }
-    myGamePiece.newPos();
-    myGamePiece.update();
+    p_one.moveAngle = 0;
+    p_one.speed = 0;
+    if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
+    if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
+    if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
+    if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1; }
+    p_one.newPos();
+    p_one.update();
 }
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
