@@ -21,25 +21,38 @@
 		<script>
 			var p_one;
 			var p_two;
-			var bullets;
+			var bullets_pone;
+			var bullets_ptwo;
 
 			function startGame() {
-				bullets = Array(10).fill(0);
+				bullets_pone = Array(10).fill(0);
+				bullets_ptwo = Array(10).fill(0);
 				p_one = new component(30, 30, "red", 225, 225);
 				p_two = new component(30, 30, "green", 450, 450);
 				myGameArea.start();
 			}
 			
 			function fire(comp){
-				for(i = 0; i < bullets.length; i++){
-					if(bullets[i] === 0){
-				    		bullets[i] = new component(10, 10, "black", 225, 225);
-						bullets[i].speed = 9;
-						bullets[i].angle = comp.angle;
-						bullets[i].moveAngle = 0;
-						bullets[i].x = comp.x;
-						bullets[i].y = comp.y;
-						return;
+				if(comp === p_one){
+					for(i = 0; i < bullets_pone.length; i++){
+						if(bullets_pone[i] === 0){
+				    			bullets_pone[i] = new component(10, 10, "black", comp.x, comp.y);
+							bullets_pone[i].speed = 9;
+							bullets_pone[i].angle = comp.angle;
+							bullets_pone[i].moveAngle = 0;
+							return;
+						}
+					}
+				}
+				if(comp === p_two){
+					for(i = 0; i < bullets_ptwo.length; i++){
+						if(bullets_ptwo[i] === 0){
+				    			bullets_ptwo[i] = new component(10, 10, "black", comp.x, comp.y);
+							bullets_ptwo[i].speed = 9;
+							bullets_ptwo[i].angle = comp.angle;
+							bullets_ptwo[i].moveAngle = 0;
+							return;
+						}
 					}
 				}
 			}
@@ -115,13 +128,23 @@
 				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
-				for(i = 0; i < bullets.length; i++){
-					if(bullets[i] !== 0){
-				    		bullets[i].newPos();
-						bullets[i].update();
-						if(bullets[i].x  > screen.width || bullets[i].x < 0 || 
-						   bullets[i].y  > screen.availHeight || bullets[i].y < 0){
-							bullets[i] = 0;
+				for(i = 0; i < bullets_pone.length; i++){
+					if(bullets_pone[i] !== 0){
+				    		bullets_pone[i].newPos();
+						bullets_pone[i].update();
+						if(bullets_pone[i].x  > screen.width || bullets_pone[i].x < 0 || 
+						   bullets_pone[i].y  > screen.availHeight || bullets_pone[i].y < 0){
+							bullets_pone[i] = 0;
+						}
+					}
+				}
+				for(i = 0; i < bullets_ptwo.length; i++){
+					if(bullets_ptwo[i] !== 0){
+				    		bullets_ptwo[i].newPos();
+						bullets_ptwo[i].update();
+						if(bullets_ptwo[i].x  > screen.width || bullets_ptwo[i].x < 0 || 
+						   bullets_ptwo[i].y  > screen.availHeight || bullets_ptwo[i].y < 0){
+							bullets_ptwo[i] = 0;
 						}
 					}
 				}
