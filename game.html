@@ -21,13 +21,23 @@
 		<script>
 			var p_one;
 			var p_two;
+			var bullets;
 
 			function startGame() {
+				bullets.apply(null, Array(10)).map(function () {});
 				p_one = new component(30, 30, "red", 225, 225);
 				p_two = new component(30, 30, "green", 450, 450);
 				myGameArea.start();
 			}
-
+			
+			function fire(){
+				for(i = 0; i < bullets.length; i++{
+					if(bullets[i] === null){
+				    		bullets[i] = new component(30, 30, "red", 225, 225);
+					}
+				}
+			}
+			
 			var myGameArea = {
 				canvas : document.createElement("canvas"),
 				start : function() {
@@ -86,7 +96,7 @@
 				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
 				if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
 				if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
-				if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1; }
+				if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1; fire();}
 				p_one.newPos();
 				p_one.update();
 				p_two.moveAngle = 0;
