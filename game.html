@@ -109,6 +109,8 @@
 				p_two.update();
 				for(i = 0; i < bullets.length; i++){
 					if(bullets[i] !== 0){
+						bullets[i].speed = 3;
+						bullets[i].moveAngle = -1;
 				    		bullets[i].newPos();
 						bullets[i].update();
 					}
