@@ -35,7 +35,8 @@
 					if(bullets[i] === 0){
 				    		bullets[i] = new component(10, 10, "black", 225, 225);
 						bullets[i].speed = 3;
-						bullets[i].moveAngle = comp.moveAngle;
+						bullets[i].angle = comp.angle;
+						bullets[i].moveAngle = 0;
 						return;
 					}
 				}
@@ -115,6 +116,10 @@
 					if(bullets[i] !== 0){
 				    		bullets[i].newPos();
 						bullets[i].update();
+						if(bullets[i].x  > screen.width || bullets[i].x < 0 || 
+						   bullets[i].y  > screen.availHeight || bullets[i].y < 0){
+							bullets[i] = 0;
+						}
 					}
 				}
 			}
