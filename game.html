@@ -21,6 +21,8 @@
 		<script>
 			var p_one;
 			var p_two;
+			var p_one_health = 100;
+			var p_two_health = 100;
 			var bullets_pone;
 			var bullets_ptwo;
 
@@ -107,6 +109,15 @@
 					this.y -= this.speed * Math.cos(this.angle);
 				}
 			}
+			
+			function isCollide(a, b) {
+			    return !(
+				((a.y + a.height) < (b.y)) ||
+				(a.y > (b.y + b.height)) ||
+				((a.x + a.width) < b.x) ||
+				(a.x > (b.x + b.width))
+			    );
+			}
 
 			function updateGameArea() {
 				myGameArea.clear();
@@ -137,6 +148,10 @@
 							bullets_pone[i] = 0;
 						}
 					}
+					if(isCollide(bullets_pone[i], p_two)){
+						bullets_pone[i] = 0;
+						p_two_health -= 10;
+					}
 				}
 				for(i = 0; i < bullets_ptwo.length; i++){
 					if(bullets_ptwo[i] !== 0){
@@ -145,6 +160,10 @@
 						if(bullets_ptwo[i].x  > screen.width || bullets_ptwo[i].x < 0 || 
 						   bullets_ptwo[i].y  > screen.availHeight || bullets_ptwo[i].y < 0){
 							bullets_ptwo[i] = 0;
+						}
+						if(isCollide(bullets_ptwo[i], p_one)){
+							bullets_ptwo[i] = 0;
+							p_one_health -= 10;
 						}
 					}
 				}
