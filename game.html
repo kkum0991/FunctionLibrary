@@ -33,7 +33,7 @@
 			function fire(){
 				for(i = 0; i < bullets.length; i++){
 					if(bullets[i] === 0){
-				    		bullets[i] = new component(30, 30, "red", 225, 225);
+				    		bullets[i] = new component(10, 10, "black", 225, 225);
 					}
 				}
 			}
@@ -107,6 +107,12 @@
 				if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
 				p_two.newPos();
 				p_two.update();
+				for(i = 0; i < bullets.length; i++){
+					if(bullets[i] !== 0){
+				    		bullets[i].newPos();
+						bullets[i].update();
+					}
+				}
 			}
 		</script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
