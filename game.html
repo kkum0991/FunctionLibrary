@@ -110,12 +110,9 @@
 				}
 			}
 			
-			function isCollide(rect1, rect2) {
-			    return
-				(rect1.x < rect2.x + rect2.width &&
-				rect1.x + rect1.width > rect2.x &&
-				   rect1.y < rect2.y + rect2.height &&
-				   rect1.height + rect1.y > rect2.y);
+			function isCollide(object1, object2) {
+			    return(object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x &&
+		object1.y < object2.y + object2.height && object1.y + object1.height > object2.y)
 			}
 
 			function updateGameArea() {
