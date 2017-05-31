@@ -118,7 +118,7 @@
 
 			function updateGameArea() {
 				myGameArea.clear();
-					if(p_two.health >= 0){
+				if(p_one_health >= 0){
 					p_one.moveAngle = 0;
 					p_one.speed = 0;
 					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
@@ -129,7 +129,7 @@
 					p_one.newPos();
 					p_one.update();
 				}
-				if(p_two.health >= 0){
+				if(p_two_health >= 0){
 					p_two.moveAngle = 0;
 					p_two.speed = 0;
 					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -1; }
