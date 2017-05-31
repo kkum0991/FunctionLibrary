@@ -27,10 +27,10 @@
 			var bullets_ptwo;
 
 			function startGame() {
-				bullets_pone = Array(150).fill(0);
-				bullets_ptwo = Array(150).fill(0);
+				bullets_pone = Array(30).fill(0);
+				bullets_ptwo = Array(30).fill(0);
 				p_one = new component(30, 30, "red", 225, 225);
-				p_two = new component(30, 30, "green", screen.width - 225, 900 - 225);
+				p_two = new component(30, 30, "green", screen.width - 225, 600 - 225);
 				myGameArea.start();
 			}
 			
@@ -63,7 +63,7 @@
 				canvas : document.createElement("canvas"),
 				start : function() {
 					this.canvas.width = screen.width - 100;
-					this.canvas.height = 900;
+					this.canvas.height = 600;
 					this.canvas.y = 100;
 					this.context = this.canvas.getContext("2d");
 					document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -151,7 +151,7 @@
 					}
 					if(isCollide(bullets_pone[i], p_two)){
 						bullets_pone[i] = 0;
-						p_two_health -= 10;
+						p_two_health -= 1;
 					}
 				}
 				for(i = 0; i < bullets_ptwo.length; i++){
@@ -164,7 +164,7 @@
 						}
 						if(isCollide(bullets_ptwo[i], p_one)){
 							bullets_ptwo[i] = 0;
-							p_one_health -= 10;
+							p_one_health -= 1;
 						}
 					}
 				}
