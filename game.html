@@ -13,7 +13,6 @@
 	
 	<section>
 	</section>
-	<label id="health">Player One: 100<br>Player Two: 100</label>
 	<body onload="startGame()">
 
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -185,10 +184,9 @@
 					}
 				}
 				var s = "Player One Health: " + p_one_health + " || Player Two Health: " + p_two_health; 
-				var ctx = canvas.getContext("2d");
+				ctx = myGameArea.context;
 				ctx.font = "30px Arial";
 				ctx.fillText(s,10,50); 
-				document.getElementById('health').innerHTML = s;
 			}
 		</script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -196,7 +194,7 @@
 
 	<footer class="foot">
 		<div class="text-center text-muted">
-			<p><br>Kishore Kumar</p>
+			<p><br>Made by Kishore Kumar</p>
 		</div>
 	</footer>
 </html>
