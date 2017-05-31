@@ -116,29 +116,41 @@
 		object1.y < object2.y + object2.height && object1.y + object1.height > object2.y)
 			}
 
+			function gameOver(winner){
+				var ctx = canvas.getContext("2d");			
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx.font = "30px Arial";
+				ctx.fillText("Player " + winner + " Won!",10,50); 	
+				wait(5000);
+				startGame();
+			}
+			
 			function updateGameArea() {
 				myGameArea.clear();
-				if(p_one_health >= 0){
-					p_one.moveAngle = 0;
-					p_one.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
-					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 4; }
-					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 4; }
-					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -4;}
-					if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
-					p_one.newPos();
-					p_one.update();
+				p_one.moveAngle = 0;
+				p_one.speed = 0;
+				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
+				if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 4; }
+				if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 4; }
+				if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -4;}
+				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
+				p_one.newPos();
+				p_one.update();
+
+				p_two.moveAngle = 0;
+				p_two.speed = 0;
+				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
+				if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 4; }
+				if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 4; }
+				if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -4; }
+				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
+				p_two.newPos();
+				p_two.update();
+				if(p_one_health <= 0){
+					gameOver(2);	
 				}
-				if(p_two_health >= 0){
-					p_two.moveAngle = 0;
-					p_two.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
-					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 4; }
-					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 4; }
-					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -4; }
-					if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
-					p_two.newPos();
-					p_two.update();
+				if(p_two_health <= 0){
+					gameOver(1);	
 				}
 				for(i = 0; i < bullets_pone.length; i++){
 					if(bullets_pone[i] !== 0){
@@ -169,6 +181,9 @@
 					}
 				}
 				var s = "Player One Health: " + p_one_health + " || Player Two Health: " + p_two_health; 
+				var ctx = canvas.getContext("2d");
+				ctx.font = "30px Arial";
+				ctx.fillText(s,10,50); 
 				document.getElementById('health').innerHTML = s;
 			}
 		</script>
