@@ -147,9 +147,11 @@
 				p_two.newPos();
 				p_two.update();
 				if(p_one_health <= 0){
+					p_one = 0;
 					gameOver(2);	
 				}
 				if(p_two_health <= 0){
+					p_two = 0;
 					gameOver(1);	
 				}
 				for(i = 0; i < bullets_pone.length; i++){
