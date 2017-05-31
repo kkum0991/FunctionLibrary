@@ -116,7 +116,6 @@
 			}
 
 			function gameOver(winner){
-				myGameArea.interval(updateGameArea, 5000);
 				ctx = myGameArea.context;
 				ctx.save();		
 				myGameArea.clear();
@@ -127,6 +126,14 @@
 			}
 			
 			function updateGameArea() {
+				if(p_one_health <= 0){
+					p_one = 0;
+					gameOver(2);	
+				}
+				if(p_two_health <= 0){
+					p_two = 0;
+					gameOver(1);	
+				}
 				myGameArea.clear();
 				p_one.moveAngle = 0;
 				p_one.speed = 0;
@@ -137,7 +144,6 @@
 				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
 				p_one.newPos();
 				p_one.update();
-
 				p_two.moveAngle = 0;
 				p_two.speed = 0;
 				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
@@ -147,14 +153,7 @@
 				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
-				if(p_one_health <= 0){
-					p_one = 0;
-					gameOver(2);	
-				}
-				if(p_two_health <= 0){
-					p_two = 0;
-					gameOver(1);	
-				}
+				
 				for(i = 0; i < bullets_pone.length; i++){
 					if(bullets_pone[i] !== 0){
 				    		bullets_pone[i].newPos();
