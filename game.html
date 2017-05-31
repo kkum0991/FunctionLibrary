@@ -27,8 +27,8 @@
 			var bullets_ptwo;
 
 			function startGame() {
-				bullets_pone = Array(15).fill(0);
-				bullets_ptwo = Array(15).fill(0);
+				bullets_pone = Array(150).fill(0);
+				bullets_ptwo = Array(150).fill(0);
 				p_one = new component(30, 30, "red", 225, 225);
 				p_two = new component(30, 30, "green", screen.width - 225, 900 - 225);
 				myGameArea.start();
@@ -121,10 +121,10 @@
 				if(p_one_health >= 0){
 					p_one.moveAngle = 0;
 					p_one.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
-					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
-					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
-					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1;}
+					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -2; }
+					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 2; }
+					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 2; }
+					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -2;}
 					if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
 					p_one.newPos();
 					p_one.update();
@@ -132,10 +132,10 @@
 				if(p_two_health >= 0){
 					p_two.moveAngle = 0;
 					p_two.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -1; }
-					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 1; }
-					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 1; }
-					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
+					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -2; }
+					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 2; }
+					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 2; }
+					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -2; }
 					if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
 					p_two.newPos();
 					p_two.update();
