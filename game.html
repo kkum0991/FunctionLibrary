@@ -122,7 +122,9 @@
 				ctx.font = "30px Arial";
 				ctx.fillText("Player " + winner + " Won!",10,50); 	
 				wait(5000);
-				startGame();
+				setTimeout(function(){
+					startGame();
+				}, 5000);
 			}
 			
 			function updateGameArea() {
@@ -153,7 +155,6 @@
 				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
-				
 				for(i = 0; i < bullets_pone.length; i++){
 					if(bullets_pone[i] !== 0){
 				    		bullets_pone[i].newPos();
