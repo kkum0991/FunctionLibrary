@@ -120,10 +120,10 @@
 				ctx.save();		
 				myGameArea.clear();
 				ctx.font = "30px Arial";
-				ctx.fillText("Player " + winner + " Won!",10,50); 	
+				ctx.fillText("Player " + winner + " Won!", window.innerWidth / 2, window.innerHeight / 2); 	
 				wait(5000);
 				setTimeout(function(){
-					startGame();
+					location.reload(forceGet);
 				}, 5000);
 			}
 			
