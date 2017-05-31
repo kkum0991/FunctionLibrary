@@ -117,6 +117,7 @@
 			}
 
 			function gameOver(winner){
+				myGameArea.interval(updateGameArea, 5000);
 				ctx = myGameArea.context;
 				ctx.save();		
 				myGameArea.clear();
