@@ -121,10 +121,10 @@
 				if(p_one_health >= 0){
 					p_one.moveAngle = 0;
 					p_one.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -3; }
-					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 3; }
-					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 3; }
-					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -3;}
+					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
+					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 4; }
+					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 4; }
+					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -4;}
 					if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
 					p_one.newPos();
 					p_one.update();
@@ -132,10 +132,10 @@
 				if(p_two_health >= 0){
 					p_two.moveAngle = 0;
 					p_two.speed = 0;
-					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -3; }
-					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 3; }
-					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 3; }
-					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -3; }
+					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
+					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 4; }
+					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 4; }
+					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -4; }
 					if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
 					p_two.newPos();
 					p_two.update();
@@ -168,8 +168,8 @@
 						}
 					}
 				}
-				
-				document.getElementById('health').innerHTML = 'your tip has been submitted!';
+				var s = "Player One Health: " + p_one_health + " || Player Two Health: " + p_two_health; 
+				document.getElementById('health').innerHTML = s;
 			}
 		</script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
