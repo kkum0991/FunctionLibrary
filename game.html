@@ -117,8 +117,9 @@
 			}
 
 			function gameOver(winner){
-				var ctx = canvas.getContext("2d");			
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx = myGameArea.context;
+				ctx.save();		
+				myGameArea.clear();
 				ctx.font = "30px Arial";
 				ctx.fillText("Player " + winner + " Won!",10,50); 	
 				wait(5000);
