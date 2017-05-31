@@ -30,7 +30,7 @@
 				bullets_pone = Array(15).fill(0);
 				bullets_ptwo = Array(15).fill(0);
 				p_one = new component(30, 30, "red", 225, 225);
-				p_two = new component(30, 30, "green", 450, 450);
+				p_two = new component(30, 30, "green", screen.width - 225, 900 - 225);
 				myGameArea.start();
 			}
 			
@@ -118,24 +118,28 @@
 
 			function updateGameArea() {
 				myGameArea.clear();
-				p_one.moveAngle = 0;
-				p_one.speed = 0;
-				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
-				if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
-				if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
-				if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1;}
-				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
-				p_one.newPos();
-				p_one.update();
-				p_two.moveAngle = 0;
-				p_two.speed = 0;
-				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -1; }
-				if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 1; }
-				if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 1; }
-				if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
-				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
-				p_two.newPos();
-				p_two.update();
+					if(p_two.health >= 0){
+					p_one.moveAngle = 0;
+					p_one.speed = 0;
+					if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -1; }
+					if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 1; }
+					if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 1; }
+					if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -1;}
+					if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
+					p_one.newPos();
+					p_one.update();
+				}
+				if(p_two.health >= 0){
+					p_two.moveAngle = 0;
+					p_two.speed = 0;
+					if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -1; }
+					if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 1; }
+					if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 1; }
+					if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -1; }
+					if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
+					p_two.newPos();
+					p_two.update();
+				}
 				for(i = 0; i < bullets_pone.length; i++){
 					if(bullets_pone[i] !== 0){
 				    		bullets_pone[i].newPos();
@@ -164,7 +168,8 @@
 						}
 					}
 				}
-				  document.getElementById('health').innerHTML = 'your tip has been submitted!';
+				
+				document.getElementById('health').innerHTML = 'your tip has been submitted!';
 			}
 		</script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
