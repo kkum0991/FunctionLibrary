@@ -158,21 +158,21 @@
 				}
 				p_one.moveAngle = 0;
 				p_one.speed = 0;
-				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
-				if (myGameArea.keys && myGameArea.keys[39]) {p_one.moveAngle = 4; }
-				if (myGameArea.keys && myGameArea.keys[38]) {p_one.speed= 4; }
-				if (myGameArea.keys && myGameArea.keys[40]) {p_one.speed= -4;}
-				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
+				if (myGameArea.keys && myGameArea.keys[65]) {p_one.moveAngle = -4; }
+				if (myGameArea.keys && myGameArea.keys[68]) {p_one.moveAngle = 4; }
+				if (myGameArea.keys && myGameArea.keys[87]) {p_one.speed= 4; }
+				if (myGameArea.keys && myGameArea.keys[83]) {p_one.speed= -4;}
+				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_one);}
 				p_one.newPos();
 				p_one.update();
 				boundCheck(p_one);
 				p_two.moveAngle = 0;
 				p_two.speed = 0;
-				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
-				if (myGameArea.keys && myGameArea.keys[68]) {p_two.moveAngle = 4; }
-				if (myGameArea.keys && myGameArea.keys[87]) {p_two.speed= 4; }
-				if (myGameArea.keys && myGameArea.keys[83]) {p_two.speed= -4; }
-				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
+				if (myGameArea.keys && myGameArea.keys[37]) {p_two.moveAngle = -4; }
+				if (myGameArea.keys && myGameArea.keys[39]) {p_two.moveAngle = 4; }
+				if (myGameArea.keys && myGameArea.keys[38]) {p_two.speed= 4; }
+				if (myGameArea.keys && myGameArea.keys[40]) {p_two.speed= -4; }
+				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
 				boundCheck(p_two);
