@@ -130,7 +130,7 @@
 					obj.x = screen.width;
 				}
 				if(obj.y >= h){
-					obj.y = h - 15;
+					obj.y = h;
 				}
 			}
 
@@ -138,6 +138,7 @@
 				ctx = myGameArea.context;
 				ctx.save();		
 				ctx.font = "30px Arial";
+				ctx.textAlign = "center"
 				ctx.fillText("Player " + winner + " Won!", screen.width / 2, h / 2); 	
 				setTimeout(function(){
 					location.reload();
