@@ -115,8 +115,7 @@
 			}
 			
 			function isCollide(object1, object2) {
-			    return(object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x &&
-		object1.y < object2.y + object2.height && object1.y + object1.height > object2.y)
+			    return(object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x && object1.y < object2.y + object2.height && object1.y + object1.height > object2.y)
 			}
 			
 			function boundCheck(obj){
@@ -139,7 +138,7 @@
 				ctx.save();		
 				ctx.font = "30px Arial";
 				ctx.textAlign = "center"
-				ctx.fillText("Player " + winner + " Won!", screen.width / 2, h / 2); 	
+				ctx.fillText("Player " + winner + " is the winner!", screen.width / 2, h / 2); 	
 				setTimeout(function(){
 					location.reload();
 				}, 5000);
@@ -157,7 +156,6 @@
 					gameOver(1);
 					return;
 				}
-				//myGameArea.clear();
 				p_one.moveAngle = 0;
 				p_one.speed = 0;
 				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
