@@ -114,12 +114,28 @@
 			    return(object1.x < object2.x + object2.width  && object1.x + object1.width  > object2.x &&
 		object1.y < object2.y + object2.height && object1.y + object1.height > object2.y)
 			}
+			
+			function boundCheck(obj){
+				if(obj.x < 0){
+					obj.x = 0;
+				}
+				if(obj.y < 0){
+					obj.y = 0;
+				}
+				if(obj.x > myGameArea.width){
+					obj.x = myGameArea.width;
+				}
+				if(obj.y > myGameArea.height){
+					obj.y = myGameArea.height;
+				}
+			}
 
 			function gameOver(winner){
 				ctx = myGameArea.context;
 				ctx.save();		
-				ctx.font = "30px Arial";
-				ctx.fillText("Player " + winner + " Won!", window.innerWidth / 2, window.innerHeight / 2); 	
+				ctx.font = "40px Arial";
+				ctx.textAlign = "center";
+				ctx.fillText("Player " + winner + " Won!", myGameArea.width / 2, myGameArea.height / 2); 	
 				setTimeout(function(){
 					location.reload();
 				}, 5000);
@@ -147,6 +163,7 @@
 				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_one);}
 				p_one.newPos();
 				p_one.update();
+				boundCheck(p_one);
 				p_two.moveAngle = 0;
 				p_two.speed = 0;
 				if (myGameArea.keys && myGameArea.keys[65]) {p_two.moveAngle = -4; }
@@ -156,6 +173,7 @@
 				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
+				boundCheck(p_two);
 				for(i = 0; i < bullets_pone.length; i++){
 					if(bullets_pone[i] !== 0){
 				    		bullets_pone[i].newPos();
