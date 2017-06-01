@@ -130,15 +130,15 @@
 					obj.x = screen.width;
 				}
 				if(obj.y >= h){
-					obj.y = 0;
+					obj.y = h - 15;
 				}
 			}
 
 			function gameOver(winner){
 				ctx = myGameArea.context;
 				ctx.save();		
-				ctx.font = "40px Arial";
-				ctx.fillText("Player " + winner + " Won!", myGameArea.width / 2, myGameArea.height / 2); 	
+				ctx.font = "30px Arial";
+				ctx.fillText("Player " + winner + " Won!", screen.width / 2, h / 2); 	
 				setTimeout(function(){
 					location.reload();
 				}, 5000);
