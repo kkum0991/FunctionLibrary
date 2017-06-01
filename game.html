@@ -119,16 +119,16 @@
 			}
 			
 			function boundCheck(obj){
-				if(obj.x - (obg.width/2) <= 0){
+				if(obj.x - (obj.width/2) <= 0){
 					obj.x = 0;
 				}
-				if(obj.y - (obg.height/2) <= 0){
+				if(obj.y - (obj.height/2) <= 0){
 					obj.y = 0;
 				}
-				if(obj.x  + (obg.width/2) >= screen.width){
+				if(obj.x  + (obj.width/2) >= screen.width){
 					obj.x = screen.width;
 				}
-				if(obj.y + (obg.height/2)>= h){
+				if(obj.y + (obj.height/2)>= h){
 					obj.y = h;
 				}
 			}
