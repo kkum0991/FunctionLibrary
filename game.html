@@ -26,7 +26,12 @@
 			var bullets_ptwo;
 			var h;
 			var w;
+			p_onesprite= new Image();
+			p_onesprite.src = 'kkum0991.github.io/resources/ShipOne.png';
+			p_twosprite= new Image();
+			p_twosprite.src = 'kkum0991.github.io/resources/ShipOne.png';
 
+			
 			function startGame() {
 				bullets_pone = Array(30).fill(0);
 				bullets_ptwo = Array(30).fill(0);
@@ -105,10 +110,12 @@
 					ctx.rotate(this.angle);
 					ctx.fillStyle = color;
 					ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
-					base_image = new Image();
-					base_image.src = 'kkum0991.github.io/resources/ShipOne.png';
-					base_image.onload = function(){
-					    ctx.drawImage(base_image, this.x, this.y);
+					p_onesprite= new Image();
+					p_onesprite.src = 'kkum0991.github.io/resources/ShipOne.png';
+					p_twosprite= new Image();
+					p_twosprite.src = 'kkum0991.github.io/resources/ShipOne.png';
+					p_onesprite.onload = function(){
+					    ctx.drawImage(p_onesprite, this.width / -2, this.height / -2, this.width, this.height);
 					}
 					ctx.restore();    
 			    	}
