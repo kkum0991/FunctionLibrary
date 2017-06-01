@@ -39,7 +39,7 @@
 				if(comp === p_one){
 					for(i = 0; i < bullets_pone.length; i++){
 						if(bullets_pone[i] === 0){
-				    			bullets_pone[i] = new component(10, 10, "black", comp.x, comp.y);
+				    			bullets_pone[i] = new component(9, 9, "black", comp.x, comp.y);
 							bullets_pone[i].speed = 9;
 							bullets_pone[i].angle = comp.angle;
 							bullets_pone[i].moveAngle = 0;
@@ -50,7 +50,7 @@
 				if(comp === p_two){
 					for(i = 0; i < bullets_ptwo.length; i++){
 						if(bullets_ptwo[i] === 0){
-				    			bullets_ptwo[i] = new component(10, 10, "black", comp.x, comp.y);
+				    			bullets_ptwo[i] = new component(9, 9, "black", comp.x, comp.y);
 							bullets_ptwo[i].speed = 9;
 							bullets_ptwo[i].angle = comp.angle;
 							bullets_ptwo[i].moveAngle = 0;
@@ -127,10 +127,10 @@
 					obj.y = 0;
 				}
 				if(obj.x > screen.width){
-					obj.x = w;
+					obj.x = screen.width;
 				}
 				if(obj.y > screen.availHeight){
-					obj.y = h
+					obj.y = screen.availHeight;
 				}
 			}
 
