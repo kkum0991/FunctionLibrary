@@ -118,7 +118,6 @@
 			function gameOver(winner){
 				ctx = myGameArea.context;
 				ctx.save();		
-				myGameArea.clear();
 				ctx.font = "30px Arial";
 				ctx.fillText("Player " + winner + " Won!", window.innerWidth / 2, window.innerHeight / 2); 	
 				setTimeout(function(){
@@ -127,15 +126,18 @@
 			}
 			
 			function updateGameArea() {
+				myGameArea.clear();
 				if(p_one_health <= 0){
 					p_one = 0;
 					gameOver(2);	
+					return;
 				}
 				if(p_two_health <= 0){
 					p_two = 0;
-					gameOver(1);	
+					gameOver(1);
+					return;
 				}
-				myGameArea.clear();
+				//myGameArea.clear();
 				p_one.moveAngle = 0;
 				p_one.speed = 0;
 				if (myGameArea.keys && myGameArea.keys[37]) {p_one.moveAngle = -4; }
