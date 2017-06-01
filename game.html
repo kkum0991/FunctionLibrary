@@ -24,6 +24,8 @@
 			var p_two_health = 100;
 			var bullets_pone;
 			var bullets_ptwo;
+			var h;
+			var w;
 
 			function startGame() {
 				bullets_pone = Array(30).fill(0);
@@ -63,6 +65,8 @@
 				start : function() {
 					this.canvas.width = window.innerWidth;
            				this.canvas.height = window.innerHeight;
+					w = window.innerWidth;
+           				h = window.innerHeight;
 					this.canvas.y = 100;
 					this.context = this.canvas.getContext("2d");
 					document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -123,10 +127,10 @@
 					obj.y = 0;
 				}
 				if(obj.x > myGameArea.width){
-					obj.x = myGameArea.width;
+					obj.x = w;
 				}
 				if(obj.y > myGameArea.height){
-					obj.y = myGameArea.height;
+					obj.y = h
 				}
 			}
 
