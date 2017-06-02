@@ -26,8 +26,8 @@
 			var bullets_ptwo;
 			var h;
 			var w;
-			var bufferone;
-			var buffertwo
+			var bufferone = 0;
+			var buffertwo = 0;
 			p_onesprite= new Image();
 			p_onesprite.src = 'kkum0991.github.io/resources/ShipOne.png';
 			p_twosprite= new Image();
@@ -42,26 +42,32 @@
 				myGameArea.start();
 			}
 			
-			function fire(comp, buffer){
-				if(comp === p_one && bufferone% 2 === 0){
-					for(i = 0; i < bullets_pone.length; i++){
-						if(bullets_pone[i] === 0){
-				    			bullets_pone[i] = new component(9, 9, "black", comp.x, comp.y);
-							bullets_pone[i].speed = 9;
-							bullets_pone[i].angle = comp.angle;
-							bullets_pone[i].moveAngle = 0;
-							return;
+			function fire(comp){
+				if(comp === p_one){
+					bufferone++;
+					if(bufferone%2 === 0){
+						for(i = 0; i < bullets_pone.length; i++){
+							if(bullets_pone[i] === 0){
+								bullets_pone[i] = new component(9, 9, "black", comp.x, comp.y);
+								bullets_pone[i].speed = 9;
+								bullets_pone[i].angle = comp.angle;
+								bullets_pone[i].moveAngle = 0;
+								return;
+							}
 						}
 					}
 				}
-				if(comp === p_two && bufferone % 2 === 0){
-					for(i = 0; i < bullets_ptwo.length; i++){
-						if(bullets_ptwo[i] === 0){
-				    			bullets_ptwo[i] = new component(9, 9, "black", comp.x, comp.y);
-							bullets_ptwo[i].speed = 9;
-							bullets_ptwo[i].angle = comp.angle;
-							bullets_ptwo[i].moveAngle = 0;
-							return;
+				if(comp === p_two){
+					buffertwo++;
+					if(buffertwo %2 === 0){
+						for(i = 0; i < bullets_ptwo.length; i++){
+							if(bullets_ptwo[i] === 0){
+				    				bullets_ptwo[i] = new component(9, 9, "black", comp.x, comp.y);
+								bullets_ptwo[i].speed = 9;
+								bullets_ptwo[i].angle = comp.angle;
+								bullets_ptwo[i].moveAngle = 0;
+								return;
+							}
 						}
 					}
 				}
@@ -178,7 +184,7 @@
 				if (myGameArea.keys && myGameArea.keys[68]) {p_one.moveAngle = 4; }
 				if (myGameArea.keys && myGameArea.keys[87]) {p_one.speed= 4; }
 				if (myGameArea.keys && myGameArea.keys[83]) {p_one.speed= -4;}
-				if (myGameArea.keys && myGameArea.keys[81]) {bufferone++; fire(p_one, bufferone);}
+				if (myGameArea.keys && myGameArea.keys[81]) {fire(p_one);}
 				p_one.newPos();
 				p_one.update();
 				boundCheck(p_one);
@@ -188,7 +194,7 @@
 				if (myGameArea.keys && myGameArea.keys[39]) {p_two.moveAngle = 4; }
 				if (myGameArea.keys && myGameArea.keys[38]) {p_two.speed= 4; }
 				if (myGameArea.keys && myGameArea.keys[40]) {p_two.speed= -4; }
-				if (myGameArea.keys && myGameArea.keys[16]) {buffertwo++; fire(p_two, buffertwo);}
+				if (myGameArea.keys && myGameArea.keys[16]) {fire(p_two);}
 				p_two.newPos();
 				p_two.update();
 				boundCheck(p_two);
